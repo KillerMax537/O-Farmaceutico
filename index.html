@@ -17,29 +17,30 @@
     <style>
         /* Centralizando o conteúdo no mobile */
         @media (max-width: 767px) {
-            /* Centralizar o texto e o botão no cabeçalho */
             .masthead .text-center {
                 text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100vh;
             }
 
-            /* Ajustar a largura máxima dos vídeos */
+            .projects-section .project-text, .about-section img {
+                text-align: center !important;
+                margin: 0 auto;
+            }
+
             .signup-section video {
                 max-width: 100%;
             }
 
-            /* Ajuste de alinhamento em projetos */
-            .projects-section .project-text {
-                text-align: center !important;
-            }
-
-            /* Ajustar cards de contato */
             .contact-section .card {
                 margin-top: 20px;
             }
         }
 
         /* Ajustes gerais para centralização */
-        .project-text, .masthead .btn, .masthead h1, .masthead h2 {
+        .project-text, .masthead h1, .masthead h2, .masthead .btn {
             text-align: center;
         }
     </style>
@@ -146,17 +147,6 @@
                         <source src="assets/video.mp4" type="video/mp4">
                         Seu navegador não suporta a tag de vídeo.
                     </video>
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center mb-3 mt-2 text-white">
-                            <div class="fw-bolder">Envio bem-sucedido!</div>
-                            Para ativar este formulário, inscreva-se em
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <div class="d-none" id="submitErrorMessage">
-                        <div class="text-center text-danger mb-3 mt-2">Erro ao enviar a mensagem!</div>
-                    </div>
                 </div>
             </div>
         </div>
