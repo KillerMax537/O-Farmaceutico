@@ -7,62 +7,51 @@
     <meta name="author" content="" />
     <title>O Farmacêutico - Curta-metragem</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        /* Centralizando o conteúdo no mobile */
-        @media (max-width: 767px) {
-            .masthead .text-center {
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                height: 100vh;
-            }
-
-            .projects-section .project-text, .about-section img {
-                text-align: center !important;
-                margin: 0 auto;
-            }
-
-            .signup-section video {
-                max-width: 100%;
-            }
-
-            .contact-section .card {
-                margin-top: 20px;
-            }
+        /* Estilo personalizado para centralizar o título em telas pequenas */
+        .masthead h1 {
+            font-size: 2.5rem; /* Tamanho da fonte para o título */
+            text-align: center;
+            margin: 0 auto;
         }
 
-        /* Ajustes gerais para centralização */
-        .project-text, .masthead h1, .masthead h2, .masthead .btn {
+        .masthead h2 {
+            font-size: 1.5rem; /* Tamanho da fonte para o subtítulo */
             text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            .masthead h1 {
+                font-size: 2rem; /* Reduz o tamanho da fonte do título em telas pequenas */
+            }
+            .masthead h2 {
+                font-size: 1.2rem; /* Reduz o tamanho da fonte do subtítulo em telas pequenas */
+            }
         }
     </style>
 </head>
 <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">O Farmacêutico</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Galeria</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#signup">Trailer</a></li>
-                </ul>
-            </div>
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top">O Farmacêutico</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link" href="#signup">Trailer</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav> 
 
     <!-- Masthead-->
     <header class="masthead">
@@ -95,7 +84,6 @@
     <!-- Projects-->
     <section class="projects-section bg-light" id="projects">
         <div class="container px-4 px-lg-5">
-            <!-- Featured Project Row-->
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                 <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="Cenas do curta O Farmacêutico" /></div>
                 <div class="col-xl-4 col-lg-5">
@@ -105,7 +93,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Project One Row-->
             <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                 <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="Cena 1 do curta O Farmacêutico" /></div>
                 <div class="col-lg-6">
@@ -119,7 +106,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Two Row-->
             <div class="row gx-0 justify-content-center">
                 <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="Cena 2 do curta O Farmacêutico" /></div>
                 <div class="col-lg-6 order-lg-first">
@@ -147,6 +133,17 @@
                         <source src="assets/video.mp4" type="video/mp4">
                         Seu navegador não suporta a tag de vídeo.
                     </video>
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3 mt-2 text-white">
+                            <div class="fw-bolder">Envio bem-sucedido!</div>
+                            Para ativar este formulário, inscreva-se em
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3 mt-2">Erro ao enviar a mensagem!</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,22 +166,20 @@
                 <div class="col-md-4 mb-3 mb-md-0">
                     <div class="card py-4 h-100" style="min-height: 250px; margin-top: -30px;">
                         <div class="card-body text-center">
-                            <i class="fab fa-instagram text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Instagram</h4>
+                            <i class="fas fa-paper-plane text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Entre em Contato</h4>
                             <hr class="my-4" />
-                            <div class="small text-black-50">
-                                <a href="https://www.instagram.com/ofarmaceuticocurta" target="_blank">@ofarmaceuticocurta</a>
-                            </div>
+                            <div class="small text-black-50">contato@ofarmaceutico.com</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0" style="visibility: hidden;">
+                <div class="col-md-4 mb-3 mb-md-0">
                     <div class="card py-4 h-100" style="min-height: 250px; margin-top: -30px;">
                         <div class="card-body text-center">
-                            <i class="fas fa-phone text-primary mb-2"></i>
-                            <h4 class="text-uppercase m-0">Telefone</h4>
+                            <i class="fas fa-comments text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Fale Conosco</h4>
                             <hr class="my-4" />
-                            <div class="small text-black-50">+55 81 1234-5678</div>
+                            <div class="small text-black-50">www.ofarmaceutico.com</div>
                         </div>
                     </div>
                 </div>
@@ -193,13 +188,12 @@
     </section>
 
     <!-- Footer-->
-    <footer class="footer bg-black small text-center text-white-50">
-        <div class="container px-4 px-lg-5">O Farmacêutico - Todos os direitos reservados &copy; 2024</div>
+    <footer class="bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">Copyright &copy; O Farmacêutico 2024</div>
     </footer>
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
