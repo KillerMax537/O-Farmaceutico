@@ -14,26 +14,54 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* Centralizando o conteúdo no mobile */
+        @media (max-width: 767px) {
+            /* Centralizar o texto e o botão no cabeçalho */
+            .masthead .text-center {
+                text-align: center;
+            }
+
+            /* Ajustar a largura máxima dos vídeos */
+            .signup-section video {
+                max-width: 100%;
+            }
+
+            /* Ajuste de alinhamento em projetos */
+            .projects-section .project-text {
+                text-align: center !important;
+            }
+
+            /* Ajustar cards de contato */
+            .contact-section .card {
+                margin-top: 20px;
+            }
+        }
+
+        /* Ajustes gerais para centralização */
+        .project-text, .masthead .btn, .masthead h1, .masthead h2 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body id="page-top">
-  <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#page-top">O Farmacêutico</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#signup">Trailer</a></li>
-            </ul>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">O Farmacêutico</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signup">Trailer</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav> 
-
+    </nav>
 
     <!-- Masthead-->
     <header class="masthead">
@@ -76,112 +104,111 @@
                     </div>
                 </div>
             </div>
-  <!-- Project One Row-->
-  <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="Cena 1 do curta O Farmacêutico" /></div>
-    <div class="col-lg-6">
-        <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-center text-lg-left">
-                    <h4 class="text-white">Tensão e Suspense</h4>
-                    <p class="mb-0 text-white-50">Uma cena que capta a essência do curta, onde a tensão é palpável.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Project Two Row-->
-<div class="row gx-0 justify-content-center">
-    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="Cena 2 do curta O Farmacêutico" /></div>
-    <div class="col-lg-6 order-lg-first">
-        <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-center text-lg-right">
-                    <h4 class="text-white">Coragem em Jogo</h4>
-                    <p class="mb-0 text-white-50">Uma representação do dilema moral enfrentado pelos personagens.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</section>
-
-
-<!-- Signup-->
-<section class="signup-section" id="signup">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-md-10 col-lg-8 mx-auto text-center">
-                <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                <h2 class="text-white mb-5">Assista ao Trailer</h2>
-                <video controls style="width: 100%; max-width: 600px;">
-                    <source src="assets/video.mp4" type="video/mp4">
-                    Seu navegador não suporta a tag de vídeo.
-                </video>
-                <div class="d-none" id="submitSuccessMessage">
-                    <div class="text-center mb-3 mt-2 text-white">
-                        <div class="fw-bolder">Envio bem-sucedido!</div>
-                        Para ativar este formulário, inscreva-se em
-                        <br />
-                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                    </div>
-                </div>
-                <div class="d-none" id="submitErrorMessage">
-                    <div class="text-center text-danger mb-3 mt-2">Erro ao enviar a mensagem!</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Contact-->
-<section class="contact-section bg-black">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-md-4 mb-3 mb-md-0" style="visibility: hidden;"> <!-- Card de Endereço invisível -->
-                <div class="card py-4 h-100" style="min-height: 250px; margin-top: -30px;">
-                    <div class="card-body text-center">
-                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Endereço</h4>
-                        <hr class="my-4" />
-                        <div class="small text-black-50">Recife, Pernambuco, Brasil</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-md-0"> <!-- Card do Instagram visível -->
-                <div class="card py-4 h-100" style="min-height: 250px; margin-top: -30px;"> <!-- Ajuste para subir o card -->
-                    <div class="card-body text-center">
-                        <i class="fab fa-instagram text-primary mb-2"></i> <!-- Ícone do Instagram -->
-                        <h4 class="text-uppercase m-0">Instagram</h4>
-                        <hr class="my-4" />
-                        <div class="small text-black-50">
-                            <a href="https://www.instagram.com/ofarmaceuticocurta" target="_blank">@ofarmaceuticocurta</a>
+            <!-- Project One Row-->
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="Cena 1 do curta O Farmacêutico" /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">Tensão e Suspense</h4>
+                                <p class="mb-0 text-white-50">Uma cena que capta a essência do curta, onde a tensão é palpável.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-3 mb-md-0" style="visibility: hidden;"> <!-- Card de Telefone invisível -->
-                <div class="card py-4 h-100" style="min-height: 250px; margin-top: -30px;">
-                    <div class="card-body text-center">
-                        <i class="fas fa-phone text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Telefone</h4>
-                        <hr class="my-4" />
-                        <div class="small text-black-50">+55 81 1234-5678</div>
+            <!-- Project Two Row-->
+            <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="Cena 2 do curta O Farmacêutico" /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">Coragem em Jogo</h4>
+                                <p class="mb-0 text-white-50">Uma representação do dilema moral enfrentado pelos personagens.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- Signup-->
+    <section class="signup-section" id="signup">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h2 class="text-white mb-5">Assista ao Trailer</h2>
+                    <video controls style="width: 100%; max-width: 600px;">
+                        <source src="assets/video.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3 mt-2 text-white">
+                            <div class="fw-bolder">Envio bem-sucedido!</div>
+                            Para ativar este formulário, inscreva-se em
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3 mt-2">Erro ao enviar a mensagem!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact-->
+    <section class="contact-section bg-black">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-3 mb-md-0" style="visibility: hidden;">
+                    <div class="card py-4 h-100" style="min-height: 250px; margin-top: -30px;">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Endereço</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50">Recife, Pernambuco, Brasil</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100" style="min-height: 250px; margin-top: -30px;">
+                        <div class="card-body text-center">
+                            <i class="fab fa-instagram text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Instagram</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50">
+                                <a href="https://www.instagram.com/ofarmaceuticocurta" target="_blank">@ofarmaceuticocurta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0" style="visibility: hidden;">
+                    <div class="card py-4 h-100" style="min-height: 250px; margin-top: -30px;">
+                        <div class="card-body text-center">
+                            <i class="fas fa-phone text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Telefone</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50">+55 81 1234-5678</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer-->
-    <footer class="bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright © O Farmacêutico 2024</div></footer>
+    <footer class="footer bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">O Farmacêutico - Todos os direitos reservados &copy; 2024</div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
 </body>
