@@ -670,6 +670,39 @@ progress {
     max-width: 1320px;
   }
 }
+/* Centralizando conteúdo no mobile */
+@media (max-width: 767px) {
+    /* Masthead (Cabeçalho) */
+    .masthead .container {
+        padding: 0;
+        text-align: center;
+    }
+
+    /* Ajustando seções com imagens */
+    .projects-section .project-text {
+        text-align: center !important;
+    }
+
+    /* Centralizar botão e texto no header */
+    .masthead h1, .masthead h2, .masthead .btn {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Centralizar video e textos do trailer */
+    .signup-section video {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Ajuste de espaçamento para as seções */
+    .about-section, .projects-section, .signup-section {
+        padding: 40px 20px;
+    }
+}
+
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
